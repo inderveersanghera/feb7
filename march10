@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            PlayWithRecursion p1 = new PlayWithRecursion();
+            Console.WriteLine(p1.Factorial(5));
+        }
+    }
+    class PlayWithRecursion
+    {
+
+        public int Factorial(int Input)
+        {
+            if (Input == 1)
+            {
+                return 1;
+            }
+            Console.WriteLine("Input value is {0}", Input);
+            return Factorial(Input - 1) * Input;
+
+        }
+    }
+}
+        
